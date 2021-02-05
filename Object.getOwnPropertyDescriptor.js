@@ -59,3 +59,4 @@ Object.getOwnPropertyDescriptor ( newObject, "getName" )
     writable: true
   ► __proto__: Object
 */
+var tt = Object.entries( Object.getOwnPropertyDescriptor ( newObject, "age" ))
