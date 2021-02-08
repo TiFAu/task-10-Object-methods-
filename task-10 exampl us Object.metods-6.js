@@ -1,6 +1,6 @@
 // в теле документа <svg width="300" height="300"></svg>
 // задание
-var sample = {
+/* var sample = {
     name: "canvas sample",
     canvas: document.querySelector("svg"),
     draw: function(){
@@ -35,7 +35,7 @@ Object,defineProperties (sample, {
                         figure[...] : figure["line"]
         }
     }
-})
+}) */
 // вариант решения
 var sample = {
     name: "canvas sample",

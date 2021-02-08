@@ -43,7 +43,7 @@ function User ( name ) {
         posts: {
             get () {
                 return JSON.parse (
-                    JSON.stringify ( ••• )
+                    JSON.stringify ( this ) // возможно это косяк
                 )
             },
             set ( postData ) {

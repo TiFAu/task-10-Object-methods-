@@ -1,0 +1,1 @@
+var obj = Object.assign ({3: null, 4: false},[5,3,7])
