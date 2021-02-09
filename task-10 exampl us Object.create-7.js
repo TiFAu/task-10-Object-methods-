@@ -1,0 +1,39 @@
+function LibraryBook (library) {
+    this.library = library || "..."
+}
+LibraryBook.prototype.setLibrary = function(lib){
+    this.__proto__.library = lib
+}
+
+function Book (author="Лев Толстой", title="Война и мир"){
+    this.author = author
+    this.title = title
+    function use (newReader){
+        this.reader = newReader
+        this.date = new Date().toLocaleString().split(", ")[0]
+    }
+    function ret (){
+        delete this.reader
+        delete this.date
+    }
+    Object.defineProperty (this, "state", {
+        get(){
+            return !this.reader ? "is free" : `выдана читателю  ${this.date}`
+        },
+        set (newReader){
+            !newReader ? ret.call(this):
+                this.reader ? 
+                    console.warn (`Книга "${this.title}" на руках`) :
+                        use.call (this.newReader)
+        }
+    })
+}
+Book.prototype = Object.create (LibraryBook.prototype)
+
+LibraryBook.call (Book.prototype, "Библиотека им. Вернадского")
+
+var books =[]
+books[0] = new Book ()
+books[1] = new Book ("Пушкин", "Борис Годунов")
+books[0].state = "Корсаков Дмитрий"
+books[0].state = "Ярмак Евгения"
