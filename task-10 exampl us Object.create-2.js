@@ -9,3 +9,4 @@ var obj = Object.create(
 )
 obj.date = new Date()
 obj.key //date
+Object.keys(obj)

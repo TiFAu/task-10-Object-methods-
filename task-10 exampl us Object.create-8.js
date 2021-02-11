@@ -5,7 +5,7 @@ LibraryBook.prototype.setLibrary = function(lib){                               
     this.__proto__.library = lib                                                // который передает полученный параметр в __proto__.library
 }
 
-function Book (author="Пугкин", title="Метель"){                      // декларируется функция конструктор с двумя параметрами (есть значения по умолчанию)
+function Book (author="Пугкин", title="Метель"){                                // декларируется функция конструктор с двумя параметрами (есть значения по умолчанию)
     this.author = author                                                        // свойсвам присваиваются соответствующие папараметры
     this.title = title
     function use (newReader){                                                   // метод регистрирующий нового читателя книги
